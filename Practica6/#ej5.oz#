@@ -1,0 +1,10 @@
+declare
+fun {NewStack S}
+   {NewCell nil S}
+end
+fun {Push}
+end
+fun {}
+
+   
+   

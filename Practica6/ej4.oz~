@@ -1,0 +1,14 @@
+declare
+fun {Reverse XS}
+   local Res in
+      {NewCell nil Res}
+      for X in XS do
+	 Res:=X|@Res
+      end
+      {Browse @Res}
+   end
+   local XS in
+      XS={1,2,3,4}
+      {Browse {Reverse XS}}
+   end
+end
