@@ -1,0 +1,25 @@
+declare
+fun {Stack}
+   C = {NewCell nil}
+   proc {Pop} case @C of E|nil then C := nil [] E|L then C:=L end end
+   fun{Top}  case @C of nil then nil [] E|L then E end end
+   proc {Push E} C := E|@C end
+   fun {IsEmpty} @C == nil end
+in
+   stack(push : Push pop : Pop  isEmpty : IsEmpty top : Top)
+end
+
+local Lista Stack1 Number in
+   Lista = [1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7  8 9]
+   {Browse {Reverse Lista}}
+   
+   Stack1 = {Stack}
+   {Stack1.push 4}
+
+   {Browse {Stack1.top}}
+   {Stack1.pop}
+   {Browse {Stack1.top}}
+   
+   {Browse {Stack1.isEmpty}}
+
+end

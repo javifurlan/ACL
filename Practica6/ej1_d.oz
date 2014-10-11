@@ -1,0 +1,6 @@
+local X Y Z in
+   X=1
+   {NewCell X Y}
+   Z=Y
+   {Browse Y==Z}
+end
